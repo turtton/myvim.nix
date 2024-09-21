@@ -133,6 +133,10 @@ return {
 					filtered_items = {
 						hide_dotfiles = false,
 					},
+					follow_curent_file = {
+						enabled = true,
+						leave_dirs_open = true,
+					},
 				},
 				default_component_configs = {
 					indent = { padding = 0 },
