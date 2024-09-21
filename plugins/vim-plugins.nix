@@ -21,6 +21,11 @@ let
     dependencies = [ skkeleton pkgs.vimPlugins.nvim-cmp ];
     dontBuild = true;
   };
+	
+	gitmoji-nvim = pkgs.vimUtils.buildVimPlugin {
+		inherit (sources.gitmoji-nvim) pname version src;
+		dontBuild = true;
+	};
 in
 [
   vimdoc-ja
@@ -59,6 +64,7 @@ in
   # Git
   gitsigns-nvim
   lazygit-nvim
+	gitmoji-nvim
 
   # LSP
   nvim-lspconfig

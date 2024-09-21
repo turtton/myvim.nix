@@ -13,6 +13,18 @@
     };
     date = "2023-11-26";
   };
+  gitmoji-nvim = {
+    pname = "gitmoji-nvim";
+    version = "326ddf01cbf3425566a089126ece7e8bd2560601";
+    src = fetchFromGitHub {
+      owner = "Dynge";
+      repo = "gitmoji.nvim";
+      rev = "326ddf01cbf3425566a089126ece7e8bd2560601";
+      fetchSubmodules = false;
+      sha256 = "sha256-EZHclDtuyZWXTBOVU4C+Km/YNM1oAIazQT4wBI5K7vo=";
+    };
+    date = "2023-11-16";
+  };
   hlchunk-nvim = {
     pname = "hlchunk-nvim";
     version = "1.3.0";

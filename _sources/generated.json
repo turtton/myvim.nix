@@ -19,6 +19,26 @@
         },
         "version": "2c268a407e9e843abd03c6fa77485541a4ddcd9a"
     },
+    "gitmoji-nvim": {
+        "cargoLocks": null,
+        "date": "2023-11-16",
+        "extract": null,
+        "name": "gitmoji-nvim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Dynge",
+            "repo": "gitmoji.nvim",
+            "rev": "326ddf01cbf3425566a089126ece7e8bd2560601",
+            "sha256": "sha256-EZHclDtuyZWXTBOVU4C+Km/YNM1oAIazQT4wBI5K7vo=",
+            "type": "github"
+        },
+        "version": "326ddf01cbf3425566a089126ece7e8bd2560601"
+    },
     "hlchunk-nvim": {
         "cargoLocks": null,
         "date": null,

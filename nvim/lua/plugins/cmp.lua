@@ -18,6 +18,7 @@ return {
 			},
 			{ name = "lspkind.nvim",  dir = "@lspkind_nvim@" },
 			{ name = "cmp-skkeleton", dir = "@cmp_skkeleton@" },
+			{ name = "gitmoji.nvim",  dir = "@gitmoji_nvim@" }
 		},
 		config = function()
 			local cmp = require("cmp")
@@ -57,6 +58,7 @@ return {
 					{ name = "vsnip" },
 					{ name = "path" },
 					{ name = "skkeleton" },
+					{ name = "gitmoji" },
 				},
 				sorting = {
 					priority_weight = 2,
