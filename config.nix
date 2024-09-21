@@ -1,10 +1,11 @@
 { plugins
-, lib
-, stdenv
-, vimPlugins
+,	pkgs
 ,
 }:
 let
+	lib = pkgs.lib;
+	stdenv = pkgs.stdenv;
+	vimPlugins = pkgs.vimPlugins;
   envVars = plugins // {
     treesitter_parsers =
       lib.pipe
