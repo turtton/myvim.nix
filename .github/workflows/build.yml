@@ -1,0 +1,34 @@
+name: build configurations
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v26
+      - uses: icewind1991/attic-action@v1
+        with:
+          name: home
+          instance: https://attic.turtton.net/
+          authToken: ${{ secrets.ATTIC_TOKEN }}
+      - name: GC
+        run: |
+          df -h
+          rm -rf "${AGENT_TOOLSDIRECTORY}"
+          df -h
+      - name: Build
+        run: |
+          nix build --no-link --show-trace --system x86_64-linux .
+          nix build --no-link --show-trace --system x86_64-linux .#config
+          df -h
