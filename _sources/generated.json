@@ -1,0 +1,77 @@
+{
+    "cmp-skkeleton": {
+        "cargoLocks": null,
+        "date": "2023-11-26",
+        "extract": null,
+        "name": "cmp-skkeleton",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "uga-rosa",
+            "repo": "cmp-skkeleton",
+            "rev": "2c268a407e9e843abd03c6fa77485541a4ddcd9a",
+            "sha256": "sha256-Odg0cmLML2L4YVcrMt7Lrie1BAl7aNEq6xqJN3/JhZs=",
+            "type": "github"
+        },
+        "version": "2c268a407e9e843abd03c6fa77485541a4ddcd9a"
+    },
+    "hlchunk-nvim": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "hlchunk-nvim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-eYwifigTRrXrW6xpFqLlqYFAftt64yweRGvvAvE7o5U=",
+            "type": "url",
+            "url": "https://github.com/shellRaining/hlchunk.nvim/archive/refs/tags/v1.3.0.tar.gz"
+        },
+        "version": "1.3.0"
+    },
+    "skkeleton": {
+        "cargoLocks": null,
+        "date": "2024-09-20",
+        "extract": null,
+        "name": "skkeleton",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "vim-skk",
+            "repo": "skkeleton",
+            "rev": "1035184420cfff705770a5b04aabe0ed0acb4db8",
+            "sha256": "sha256-u1Bd/tNpftheBkIRunu29h3VWISGcu38dbRdui8WRqc=",
+            "type": "github"
+        },
+        "version": "1035184420cfff705770a5b04aabe0ed0acb4db8"
+    },
+    "vimdoc-ja": {
+        "cargoLocks": null,
+        "date": "2024-09-16",
+        "extract": null,
+        "name": "vimdoc-ja",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "vim-jp",
+            "repo": "vimdoc-ja",
+            "rev": "c35b922fb0528b5a2729dc3b722aaa55d5e956d7",
+            "sha256": "sha256-kS/ry45pwOLX1pWR1MkAqrGlzLEaY09XXrqiy1bREe0=",
+            "type": "github"
+        },
+        "version": "c35b922fb0528b5a2729dc3b722aaa55d5e956d7"
+    }
+}
