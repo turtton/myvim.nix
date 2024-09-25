@@ -13,6 +13,8 @@
   nixd
   ## TOML
   taplo
+	## yaml
+	yaml-language-server
   ## Shell
   shellcheck
   shfmt
