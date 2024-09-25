@@ -5,21 +5,13 @@ return {
 		dir = "@copilot_lua@",
 		event = "InsertEnter",
 		opts = {
-			suggestion = {
-				enabled = false,
-				auto_trigger = true,
-				keymap = {
-					accept = "<C-l>",
-				}
+			suggestion = { enabled = true, auto_trigger = true, keymap = { accept = "<C-l>" } },
+			-- panel = { enabled = false },
+			filetypes = {
+				markdown = true,
+				help = true,
 			},
 		},
-	},
-	{ -- Fixme not working
-		name = "copilot_cmp",
-		dir = "@copilot_cmp@",
-		config = function()
-			require("copilot_cmp").setup()
-		end
 	},
 	{
 		name = "CopilotChat.nvim",
