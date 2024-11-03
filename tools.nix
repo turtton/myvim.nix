@@ -2,8 +2,8 @@
   lazygit
   # Required by telescope
   ripgrep
-	# Required by denops
-	deno
+  # Required by denops
+  deno
 
   # Language servers
   ## Lua
@@ -13,8 +13,8 @@
   nixd
   ## TOML
   taplo
-	## yaml
-	yaml-language-server
+  ## yaml
+  yaml-language-server
   ## Shell
   shellcheck
   shfmt

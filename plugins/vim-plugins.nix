@@ -21,11 +21,11 @@ let
     dependencies = [ skkeleton pkgs.vimPlugins.nvim-cmp ];
     dontBuild = true;
   };
-	
-	gitmoji-nvim = pkgs.vimUtils.buildVimPlugin {
-		inherit (sources.gitmoji-nvim) pname version src;
-		dontBuild = true;
-	};
+
+  gitmoji-nvim = pkgs.vimUtils.buildVimPlugin {
+    inherit (sources.gitmoji-nvim) pname version src;
+    dontBuild = true;
+  };
 in
 [
   vimdoc-ja
@@ -40,7 +40,7 @@ in
   # Syntax Highlighting
   nvim-treesitter
 
-	better-escape-nvim
+  better-escape-nvim
 
   # Coding
   comment-nvim
@@ -59,12 +59,12 @@ in
 
   # Copilot
   copilot-lua
-	CopilotChat-nvim
+  CopilotChat-nvim
 
   # Git
   gitsigns-nvim
   lazygit-nvim
-	gitmoji-nvim
+  gitmoji-nvim
 
   # LSP
   nvim-lspconfig
@@ -102,5 +102,5 @@ in
   promise-async
   nui-nvim
   nvim-web-devicons
-	denops-vim
+  denops-vim
 ])
