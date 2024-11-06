@@ -42,6 +42,7 @@ let
             typescript
             vim
             yaml
+            yuck
             zig
           ]
         )).dependencies
