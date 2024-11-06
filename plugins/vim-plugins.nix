@@ -39,6 +39,7 @@ in
 
   # Syntax Highlighting
   nvim-treesitter
+	hmts-nvim
 
   better-escape-nvim
 
