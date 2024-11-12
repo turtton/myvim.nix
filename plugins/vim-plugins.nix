@@ -39,7 +39,7 @@ in
 
   # Syntax Highlighting
   nvim-treesitter
-	hmts-nvim
+  hmts-nvim
 
   better-escape-nvim
 
@@ -97,6 +97,7 @@ in
   nvim-scrollbar
   toggleterm-nvim
   which-key-nvim
+  vim-wakatime
 
   # Libraries
   plenary-nvim

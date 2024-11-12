@@ -5,6 +5,9 @@
   # Required by denops
   deno
 
+  # Time management
+  wakatime-cli
+
   # Language servers
   ## Lua
   lua-language-server

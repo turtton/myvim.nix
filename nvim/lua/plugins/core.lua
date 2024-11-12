@@ -79,6 +79,12 @@ return {
 				desc = "Buffer Local Keymaps (which-key)",
 			},
 		},
-	}
-}
+	},
 
+	-- Wakatime
+	{
+		name = "vim-wakatime",
+		dir = "@vim_wakatime@",
+		lazy = false,
+	},
+}
