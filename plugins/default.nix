@@ -31,7 +31,7 @@ let
 
   plugins = (pkgListToAttr (import ./vim-plugins.nix { inherit pkgs sources; })) // {
     lazy_nvim = pkgs.callPackage ./lazy-nvim.nix { };
-    skk_dict = "${pkgs.skk-dicts}/share/SKK-JISYO.L";
+    skk_dict = "${pkgs.libskk}/share/skk/SKK-JISYO.L";
   };
 in
 plugins
