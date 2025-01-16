@@ -31,7 +31,7 @@ let
 
   plugins = (pkgListToAttr (import ./vim-plugins.nix { inherit pkgs sources; })) // {
     lazy_nvim = pkgs.callPackage ./lazy-nvim.nix { };
-    skk_dict = "${pkgs.libskk}/share/skk/SKK-JISYO.L";
+    skk_dict = if pkgs.hostPlatform.isLinux then "${pkgs.libskk}/share/skk/SKK-JISYO.L" else "${pkgs.macskk}/Library/Containers/net.mtgto.inputmethod.macSKK/Data/Documents/Dictionaries/SKK-JISYO.L";
   };
 in
 plugins
