@@ -34,6 +34,9 @@ in
   cmp-skkeleton
 ]
 ++ (with pkgs.vimPlugins; [
+  # Plugin manager
+  lazy-nvim
+
   # Colorscheme
   catppuccin-nvim
 

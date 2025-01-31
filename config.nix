@@ -51,20 +51,32 @@ let
           (builtins.concatStringsSep ",")
         ];
   };
-in
-stdenv.mkDerivation (
-  envVars
+  preprocessed = stdenv.mkDerivation (
+    envVars
     // {
-    pname = "turtton-nvim-config";
-    version = "latest";
-    src = ./nvim;
+      pname = "turtton-nvim-config";
+      version = "latest";
+      src = ./nvim;
 
-    installPhase = ''
-      mkdir -p $out
-      for file in $(find . -type f); do
-        substituteAllInPlace "$file"
-      done
-      cp -r ./ $out
-    '';
-  }
-)
+      installPhase = ''
+        mkdir -p $out
+        for file in $(find . -type f); do
+          substituteAllInPlace "$file"
+        done
+        cp -r ./ $out
+      '';
+    }
+  );
+in
+stdenv.mkDerivation {
+  name = "turtton-nvim-config";
+  version = "latest";
+  src = preprocessed;
+  turtton_nvim_config_path = preprocessed;
+
+  installPhase = ''
+    		mkdir -p $out
+    		substituteAllInPlace ./lua/init.lua
+    		cp -r ./ $out
+    	'';
+}
