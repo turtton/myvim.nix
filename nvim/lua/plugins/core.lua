@@ -87,4 +87,11 @@ return {
 		dir = "@vim_wakatime@",
 		lazy = false,
 	},
+
+	-- Direnv
+	{
+		name = "direnv.vim",
+		dir = "@direnv_vim@",
+		lazy = false,
+	},
 }

@@ -101,6 +101,7 @@ in
   toggleterm-nvim
   which-key-nvim
   vim-wakatime
+  direnv-vim
 
   # Libraries
   plenary-nvim
