@@ -22,13 +22,17 @@ set showmatch
 " allow mouse
 set mouse=a
 
-" indents
+" indents https://qiita.com/ysn/items/f4fc8f245ba50d5fb8b0
+" Use :retab command to switch between tabs and spaces
 set noexpandtab
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+"" follows tabstop
+set shiftwidth=0
+"" follows shiftwidth
+set softtabstop=-1
 set autoindent
 set smartindent
+set smarttab
 " bind clipboard
 set clipboard+=unnamed,unnamedplus
 " enable spell checking
