@@ -105,6 +105,7 @@ in
   direnv-vim
   smart-splits-nvim
   mini-bufremove
+  mini-indentscope
   sort-nvim
 
   # Libraries
