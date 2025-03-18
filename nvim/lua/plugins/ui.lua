@@ -139,6 +139,7 @@ return {
 					enabled = true,
 					leave_dirs_open = true,
 				},
+				use_libuv_file_watcher = true,
 			},
 			default_component_configs = {
 				indent = { padding = 0 },
@@ -166,7 +167,8 @@ return {
 			},
 		},
 		keys = {
-			{ "<leader>e", "<cmd>Neotree<cr>", desc = "Toggle file explorer" },
+			{ "<leader>e",  "<cmd>Neotree<cr>",                  desc = "Toggle file explorer" },
+			{ "<leader>ge", "<cmd>Neotree float git_status<CR>", desc = "Toggle git file explorer" },
 		}
 	},
 }
