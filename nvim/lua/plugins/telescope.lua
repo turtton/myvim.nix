@@ -8,6 +8,12 @@ return {
 	},
 	opts = function()
 		local telescope_actions = require("telescope.actions")
+		local telescopeConfig = require("telescope.config")
+		-- Clone the default Telescope configuration
+		local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) }
+		table.insert(vimgrep_arguments, "--hidden")
+		table.insert(vimgrep_arguments, "--glob")
+		table.insert(vimgrep_arguments, "!**/.git/*")
 		return {
 			defaults = {
 				file_ignore_patterns = {
@@ -20,7 +26,13 @@ return {
 						["q"] = telescope_actions.close,
 					},
 				},
+				vimgrep_arguments = vimgrep_arguments,
 			},
+			pickers = {
+				find_files = {
+					find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+				},
+			}
 		}
 	end,
 	keys = {
