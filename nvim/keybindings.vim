@@ -5,13 +5,13 @@ cnoremap <silent> w!! :w !sudo tee > /dev/null %<CR> :e!<CR>
 " quick normal mode
 inoremap <C-h> <ESC>
 " change display
-nmap <C-j> <c-w>j
-nmap <C-w> <c-w>k
-nmap <C-h> <c-w>h
-nmap <C-l> <c-w>l
+nmap <C-j> :wincmd j<CR>
+nmap <C-w> :wincmd k<CR>
+nmap <C-h> :wincmd h<CR>
+nmap <C-l> :wincmd l<CR>
 " split display
-nmap sv <c-w>v
-nmap ss <c-w>s
+nmap sv :vsplit<CR>
+nmap ss :split<CR>
 " quick redo
 nmap U <c-R>
 
