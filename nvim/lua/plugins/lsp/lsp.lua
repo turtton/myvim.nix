@@ -135,4 +135,21 @@ return {
 			},
 		}
 	},
+
+	{
+		name = "otter.nvim",
+		dir = "@otter_nvim@",
+		dependencies = {
+			{ name = "nvim-treesitter", dir = "@nvim_treesitter@" },
+		},
+		event = { "BufReadPre", "BufNewFile" },
+		opts = {},
+		keys = {
+			{
+				"<leader>lo",
+				'<cmd>lua require("otter").activate()<CR>',
+				desc = "Activate Otter",
+			}
+		}
+	},
 }

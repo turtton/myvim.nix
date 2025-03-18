@@ -71,6 +71,7 @@ in
   gitmoji-nvim
 
   # LSP
+  otter-nvim
   nvim-lspconfig
   lspsaga-nvim
   lspkind-nvim
