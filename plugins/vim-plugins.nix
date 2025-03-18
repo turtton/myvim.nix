@@ -104,6 +104,8 @@ in
   vim-wakatime
   direnv-vim
   smart-splits-nvim
+  mini-bufremove
+  sort-nvim
 
   # Libraries
   plenary-nvim

@@ -18,7 +18,7 @@ return {
 		},
 		-- optional for floating window border decoration
 		dependencies = {
-			{ name = "nvim-lua/plenary.nvim", dir = "@plenary@" },
+			{ name = "plenary.nvim", dir = "@plenary_nvim@" },
 		},
 		-- setting the keybinding for LazyGit with 'keys' is recommended in
 		-- order to load the plugin when the command is run for the first time
@@ -27,4 +27,3 @@ return {
 		}
 	},
 }
-
