@@ -102,6 +102,7 @@ in
   which-key-nvim
   vim-wakatime
   direnv-vim
+  smart-splits-nvim
 
   # Libraries
   plenary-nvim
