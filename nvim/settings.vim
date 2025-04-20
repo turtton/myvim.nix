@@ -24,7 +24,7 @@ set mouse=a
 
 " indents https://qiita.com/ysn/items/f4fc8f245ba50d5fb8b0
 " Use :retab command to switch between tabs and spaces
-set noexpandtab
+set expandtab
 set tabstop=4
 "" follows tabstop
 set shiftwidth=0
