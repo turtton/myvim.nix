@@ -44,7 +44,7 @@ return {
 			desc = "Find files",
 		},
 		{
-			"<leader>fg",
+			"<leader>fr",
 			function()
 				require("telescope.builtin").live_grep()
 			end,
