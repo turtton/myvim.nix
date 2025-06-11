@@ -174,6 +174,7 @@ return {
 	{
 		name = "claude-code.nvim",
 		dir = "@claude_code_nvim@",
+		cmd = "ClaudeCode",
 		dependencies = {
 			{ name = "plenary.nvim", dir = "@plenary_nvim@" },
 		},
