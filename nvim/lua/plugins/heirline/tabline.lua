@@ -8,7 +8,7 @@ local FileIcon = {
 			local filename = self.filename
 			local extension = vim.fn.fnamemodify(filename, ":e")
 			self.icon, self.icon_color =
-					require("nvim-web-devicons").get_icon_color(filename, extension, { default = true })
+				require("nvim-web-devicons").get_icon_color(filename, extension, { default = true })
 		end,
 		provider = function(self)
 			return " " .. self.icon and (self.icon .. " ")
@@ -44,7 +44,7 @@ local FileFlags = {
 	{
 		condition = function(self)
 			return not vim.api.nvim_buf_get_option(self.bufnr, "modifiable")
-					or vim.api.nvim_buf_get_option(self.bufnr, "readonly")
+				or vim.api.nvim_buf_get_option(self.bufnr, "readonly")
 		end,
 		provider = function(self)
 			if vim.api.nvim_buf_get_option(self.bufnr, "buftype") == "terminal" then
@@ -130,4 +130,3 @@ local TabLine = utils.make_buflist(
 )
 
 return TabLine
-

@@ -5,7 +5,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme "catppuccin-mocha"
+			vim.cmd.colorscheme("catppuccin-mocha")
 		end,
 		opts = {
 			integrations = {
@@ -13,7 +13,7 @@ return {
 				noice = true,
 				which_key = true,
 			},
-		}
+		},
 	},
 
 	-- Docs (ja)
@@ -103,7 +103,7 @@ return {
 				'<cmd>lua require("smart-splits").swap_buf_right()<CR>',
 				desc = "Move Buffer Right",
 			},
-		}
+		},
 	},
 
 	-- Indent Visualization

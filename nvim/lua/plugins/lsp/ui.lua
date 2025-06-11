@@ -7,7 +7,7 @@ return {
 		dir = "@lspsaga_nvim@",
 		event = "LspAttach",
 		dependencies = {
-			{ name = "nvim-treesitter",   dir = "@nvim_treesitter@" },
+			{ name = "nvim-treesitter", dir = "@nvim_treesitter@" },
 			{ name = "nvim-web-devicons", dir = "@nvim_web_devicons@" },
 		},
 		opts = function()
@@ -103,4 +103,3 @@ return {
 		},
 	},
 }
-

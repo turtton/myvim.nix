@@ -5,9 +5,9 @@ return {
 		event = "InsertEnter",
 		dependencies = {
 			{ name = "cmp-nvim-lsp", dir = "@cmp_nvim_lsp@" },
-			{ name = "cmp-buffer",   dir = "@cmp_buffer@" },
-			{ name = "cmp-cmdline",  dir = "@cmp_cmdline@" },
-			{ name = "cmp-path",     dir = "@cmp_path@" },
+			{ name = "cmp-buffer", dir = "@cmp_buffer@" },
+			{ name = "cmp-cmdline", dir = "@cmp_cmdline@" },
+			{ name = "cmp-path", dir = "@cmp_path@" },
 			{
 				name = "cmp_luasnip",
 				dir = "@cmp_luasnip@",
@@ -16,11 +16,11 @@ return {
 					dir = "@luasnip@",
 				},
 			},
-			{ name = "lspkind.nvim",  dir = "@lspkind_nvim@" },
+			{ name = "lspkind.nvim", dir = "@lspkind_nvim@" },
 			{ name = "cmp-skkeleton", dir = "@cmp_skkeleton@" },
-			{ name = "gitmoji.nvim",  dir = "@gitmoji_nvim@" },
+			{ name = "gitmoji.nvim", dir = "@gitmoji_nvim@" },
 			-- still not work
-			{ name = "copilot-cmp",   dir = "@copilot_cmp@" },
+			{ name = "copilot-cmp", dir = "@copilot_cmp@" },
 		},
 		config = function()
 			local cmp = require("cmp")
@@ -32,7 +32,7 @@ return {
 					format = lspkind.cmp_format({
 						mode = "symbol",
 						max_width = 50,
-						symbol_map = { Copilot = "" }
+						symbol_map = { Copilot = "" },
 					}),
 				},
 				snippet = {
@@ -96,9 +96,12 @@ return {
 				}),
 			})
 			local has_words_before = function()
-				if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
+				if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then
+					return false
+				end
 				local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-				return col ~= 0 and vim.api.nvim_buf_get_text(0, line - 1, 0, line - 1, col, {})[1]:match("^%s*$") == nil
+				return col ~= 0
+					and vim.api.nvim_buf_get_text(0, line - 1, 0, line - 1, col, {})[1]:match("^%s*$") == nil
 			end
 			cmp.setup({
 				mapping = {

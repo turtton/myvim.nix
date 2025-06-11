@@ -18,19 +18,20 @@ let
 
   pkgListToAttr =
     pkgList:
-    pkgs.lib.foldl'
-      (
-        acc: pkg:
-        let
-          pname = pkg.pname;
-        in
-        acc // { "${normalizePname pname}" = pkg; }
-      )
-      { }
-      pkgList;
+    pkgs.lib.foldl' (
+      acc: pkg:
+      let
+        pname = pkg.pname;
+      in
+      acc // { "${normalizePname pname}" = pkg; }
+    ) { } pkgList;
 
   plugins = (pkgListToAttr (import ./vim-plugins.nix { inherit pkgs sources; })) // {
-    skk_dict = if pkgs.hostPlatform.isLinux then "${pkgs.libskk}/share/skk/SKK-JISYO.L" else "${pkgs.macskk}/Library/Containers/net.mtgto.inputmethod.macSKK/Data/Documents/Dictionaries/SKK-JISYO.L";
+    skk_dict =
+      if pkgs.hostPlatform.isLinux then
+        "${pkgs.libskk}/share/skk/SKK-JISYO.L"
+      else
+        "${pkgs.macskk}/Library/Containers/net.mtgto.inputmethod.macSKK/Data/Documents/Dictionaries/SKK-JISYO.L";
   };
 in
 plugins

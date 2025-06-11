@@ -12,13 +12,19 @@ let
 
   skkeleton = pkgs.vimUtils.buildVimPlugin {
     inherit (sources.skkeleton) pname version src;
-    dependencies = [ pkgs.vimPlugins.denops-vim pkgs.deno ];
+    dependencies = [
+      pkgs.vimPlugins.denops-vim
+      pkgs.deno
+    ];
     dontBuild = true;
   };
 
   cmp-skkeleton = pkgs.vimUtils.buildVimPlugin {
     inherit (sources.cmp-skkeleton) pname version src;
-    dependencies = [ skkeleton pkgs.vimPlugins.nvim-cmp ];
+    dependencies = [
+      skkeleton
+      pkgs.vimPlugins.nvim-cmp
+    ];
     dontBuild = true;
   };
 
@@ -64,6 +70,9 @@ in
   # Copilot
   copilot-lua
   CopilotChat-nvim
+
+  # Claude Code
+  claude-code-nvim
 
   # Git
   gitsigns-nvim

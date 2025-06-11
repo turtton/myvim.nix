@@ -23,7 +23,7 @@ return {
 			local buttons = {
 				type = "group",
 				val = {
-					{ type = "text",    val = "Quick links", opts = { hl = "SpecialComment", position = "center" } },
+					{ type = "text", val = "Quick links", opts = { hl = "SpecialComment", position = "center" } },
 					{ type = "padding", val = 1 },
 					button("f", get_icon("Search") .. "  Telescope", "<cmd>Telescope find_files<cr>"),
 					button("r", get_icon("SearchText") .. "  Ripgrep", "<cmd>Telescope live_grep<cr>"),
@@ -53,8 +53,8 @@ return {
 			},
 		},
 		keys = {
-			{ "<C-t>", "<cmd>ToggleTerm<CR>", desc = "Terminal" }
-		}
+			{ "<C-t>", "<cmd>ToggleTerm<CR>", desc = "Terminal" },
+		},
 	},
 
 	-- Indent
@@ -81,7 +81,7 @@ return {
 		event = "BufReadPost",
 		dependencies = { name = "nvim-hlslens", dir = "@nvim_hlslens@" },
 		config = function()
-			local colors = require("catppuccin.palettes").get_palette "mocha"
+			local colors = require("catppuccin.palettes").get_palette("mocha")
 			require("scrollbar").setup({
 				hide_if_all_visible = true,
 				excluded_buftypes = {
@@ -116,9 +116,9 @@ return {
 		dir = "@neo_tree_nvim@",
 		cmd = "Neotree",
 		dependencies = {
-			{ name = "plenary.nvim",      dir = "@plenary_nvim@" },
+			{ name = "plenary.nvim", dir = "@plenary_nvim@" },
 			{ name = "nvim-web-devicons", dir = "@nvim_web_devicons@" },
-			{ name = "nui.nvim",          dir = "@nui_nvim@" },
+			{ name = "nui.nvim", dir = "@nui_nvim@" },
 		},
 		opts = {
 			close_if_last_window = true,
@@ -167,8 +167,8 @@ return {
 			},
 		},
 		keys = {
-			{ "<leader>e",  "<cmd>Neotree<cr>",                  desc = "Toggle file explorer" },
+			{ "<leader>e", "<cmd>Neotree<cr>", desc = "Toggle file explorer" },
 			{ "<leader>ge", "<cmd>Neotree float git_status<CR>", desc = "Toggle git file explorer" },
-		}
+		},
 	},
 }

@@ -1,6 +1,6 @@
-{ plugins
-, pkgs
-,
+{
+  plugins,
+  pkgs,
 }:
 let
   lib = pkgs.lib;

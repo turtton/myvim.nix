@@ -3,7 +3,7 @@ return {
 	dir = "@telescope_nvim@",
 	cmd = "Telescope",
 	dependencies = {
-		{ name = "plenary.nvim",                dir = "@plenary_nvim@" },
+		{ name = "plenary.nvim", dir = "@plenary_nvim@" },
 		{ name = "telescope-file-browser.nvim", dir = "@telescope_file_browser_nvim@" },
 	},
 	opts = function()
@@ -32,14 +32,14 @@ return {
 				find_files = {
 					find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
 				},
-			}
+			},
 		}
 	end,
 	keys = {
 		{
 			"<leader>ff",
 			function()
-				require('telescope.builtin').find_files()
+				require("telescope.builtin").find_files()
 			end,
 			desc = "Find files",
 		},
