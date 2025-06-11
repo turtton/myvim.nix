@@ -171,4 +171,25 @@ return {
 			{ "<leader>ge", "<cmd>Neotree float git_status<CR>", desc = "Toggle git file explorer" },
 		},
 	},
+	{
+		name = "claude-code.nvim",
+		dir = "@claude_code_nvim@",
+		dependencies = {
+			{ name = "plenary.nvim", dir = "@plenary_nvim@" },
+		},
+		config = function()
+			require("claude-code").setup({
+				keymaps = {
+					toggle = {
+						normal = "<C-,>",
+						terminal = "<C-,>",
+						variants = {
+							continue = "<leader>cC",
+							verbose = "<leader>cV",
+						},
+					},
+				},
+			})
+		end,
+	},
 }
