@@ -5,11 +5,6 @@ let
     dontBuild = true;
   };
 
-  hlchunk-nvim = pkgs.vimUtils.buildVimPlugin {
-    inherit (sources.hlchunk-nvim) pname version src;
-    dontBuild = true;
-  };
-
   skkeleton = pkgs.vimUtils.buildVimPlugin {
     inherit (sources.skkeleton) pname version src;
     dependencies = [
@@ -35,7 +30,6 @@ let
 in
 [
   vimdoc-ja
-  hlchunk-nvim
   skkeleton
   cmp-skkeleton
 ]
@@ -116,6 +110,7 @@ in
   mini-bufremove
   mini-indentscope
   sort-nvim
+  hlchunk-nvim
 
   # Libraries
   plenary-nvim

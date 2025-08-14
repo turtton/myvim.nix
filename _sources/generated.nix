@@ -15,46 +15,38 @@
   };
   gitmoji-nvim = {
     pname = "gitmoji-nvim";
-    version = "326ddf01cbf3425566a089126ece7e8bd2560601";
+    version = "2659de229c2b26d50732f1220700eebbcdb2d6ef";
     src = fetchFromGitHub {
       owner = "Dynge";
       repo = "gitmoji.nvim";
-      rev = "326ddf01cbf3425566a089126ece7e8bd2560601";
+      rev = "2659de229c2b26d50732f1220700eebbcdb2d6ef";
       fetchSubmodules = false;
-      sha256 = "sha256-EZHclDtuyZWXTBOVU4C+Km/YNM1oAIazQT4wBI5K7vo=";
+      sha256 = "sha256-cihJ2U+GIqf98t6wS4Fso6R8l69vXT+BsstqY7rrlc4=";
     };
-    date = "2023-11-16";
-  };
-  hlchunk-nvim = {
-    pname = "hlchunk-nvim";
-    version = "1.3.0";
-    src = fetchurl {
-      url = "https://github.com/shellRaining/hlchunk.nvim/archive/refs/tags/v1.3.0.tar.gz";
-      sha256 = "sha256-eYwifigTRrXrW6xpFqLlqYFAftt64yweRGvvAvE7o5U=";
-    };
+    date = "2025-04-23";
   };
   skkeleton = {
     pname = "skkeleton";
-    version = "f1f0586c69d84c6ee5f3e5a4ca76cc188161b944";
+    version = "e60d2a1d5b3372f3fa2bf087fc76c85e56afc955";
     src = fetchFromGitHub {
       owner = "vim-skk";
       repo = "skkeleton";
-      rev = "f1f0586c69d84c6ee5f3e5a4ca76cc188161b944";
+      rev = "e60d2a1d5b3372f3fa2bf087fc76c85e56afc955";
       fetchSubmodules = false;
-      sha256 = "sha256-egAD1VDmoks9WwsEMOgyJmiMRV+p4f6S4sWOMKAew48=";
+      sha256 = "sha256-8fBcIGFV3F3q1Nj6xopZOVdhN14Vd51Gm+g0L07xlyI=";
     };
-    date = "2025-02-09";
+    date = "2025-08-11";
   };
   vimdoc-ja = {
     pname = "vimdoc-ja";
-    version = "ff710d919b9c325c524ec15949d05b8d9cd61c06";
+    version = "6e99b320968248a44077fa6bab884aa122cffdc5";
     src = fetchFromGitHub {
       owner = "vim-jp";
       repo = "vimdoc-ja";
-      rev = "ff710d919b9c325c524ec15949d05b8d9cd61c06";
+      rev = "6e99b320968248a44077fa6bab884aa122cffdc5";
       fetchSubmodules = false;
-      sha256 = "sha256-7Bh40qBcxbiyvmGtPzqEDV5WI74cDDaBi/3j6J61HJQ=";
+      sha256 = "sha256-LINAqBm/E/eDj9WALXS0X3SVBUGnpSbvRrAKGu+vi4Q=";
     };
-    date = "2025-03-17";
+    date = "2025-08-14";
   };
 }

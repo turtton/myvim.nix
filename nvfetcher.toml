@@ -13,11 +13,6 @@ src.git = "https://github.com/uga-rosa/cmp-skkeleton"
 src.branch = "main"
 fetch.github = "uga-rosa/cmp-skkeleton"
 
-[hlchunk-nvim]
-src.github = "shellRaining/hlchunk.nvim"
-src.prefix = "v"
-fetch.url = "https://github.com/shellRaining/hlchunk.nvim/archive/refs/tags/v$ver.tar.gz"
-
 [gitmoji-nvim]
 src.git = "https://github.com/Dynge/gitmoji.nvim"
 src.branch = "main"
