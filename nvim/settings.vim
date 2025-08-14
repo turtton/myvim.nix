@@ -13,11 +13,17 @@ set incsearch
 set scrolloff=5
 
 " -- display --
-set number
 set title
 set ruler
 set nolist
 set showmatch
+set number
+" show line numbers relative only avtive window
+augroup numbertogle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+    autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+augroup END
 
 " allow mouse
 set mouse=a
