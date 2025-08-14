@@ -66,7 +66,7 @@ in
   CopilotChat-nvim
 
   # Claude Code
-  claude-code-nvim
+  claudecode-nvim
 
   # Git
   gitsigns-nvim
@@ -118,4 +118,5 @@ in
   nui-nvim
   nvim-web-devicons
   denops-vim
+  snacks-nvim
 ])
