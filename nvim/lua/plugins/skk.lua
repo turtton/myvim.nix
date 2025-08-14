@@ -21,4 +21,8 @@ return {
 			end,
 		})
 	end,
+	config = function()
+		vim.api.nvim_eval("add(g:skkeleton#mapped_keys, '<Tab>')")
+		vim.fn["skkeleton#register_keymap"]("henkan", "<Tab>", "kakutei")
+	end,
 }
