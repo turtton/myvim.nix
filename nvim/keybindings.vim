@@ -3,7 +3,8 @@
 " save as superuser
 cnoremap <silent> w!! :w !sudo tee > /dev/null %<CR> :e!<CR>
 " quick normal mode
-inoremap <C-h> <ESC>
+tnoremap <C-]> <C-\><C-n>
+
 " change display
 nmap <C-j> :wincmd j<CR>
 nmap <C-w> :wincmd k<CR>
