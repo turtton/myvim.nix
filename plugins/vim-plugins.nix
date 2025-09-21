@@ -88,6 +88,9 @@ in
   # Formatter
   conform-nvim
 
+  # Tex
+  vimtex
+
   # Start Page
   alpha-nvim
   # Status Line
