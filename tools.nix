@@ -25,7 +25,7 @@ with pkgs;
   shfmt
   nodePackages.bash-language-server
   # Docker
-  nodePackages.dockerfile-language-server-nodejs
+  dockerfile-language-server
   # Haskell
   haskell-language-server
   haskellPackages.fourmolu
