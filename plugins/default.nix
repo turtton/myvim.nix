@@ -28,7 +28,7 @@ let
 
   plugins = (pkgListToAttr (import ./vim-plugins.nix { inherit pkgs sources; })) // {
     skk_dict =
-      if pkgs.hostPlatform.isLinux then
+      if pkgs.stdenv.hostPlatform.isLinux then
         "${pkgs.libskk}/share/skk/SKK-JISYO.L"
       else
         "${pkgs.macskk}/Library/Containers/net.mtgto.inputmethod.macSKK/Data/Documents/Dictionaries/SKK-JISYO.L";

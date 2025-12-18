@@ -78,7 +78,7 @@ in
   nvim-lspconfig
   lspsaga-nvim
   lspkind-nvim
-  rust-tools-nvim
+  rustaceanvim
   crates-nvim
   typst-vim
   neodev-nvim

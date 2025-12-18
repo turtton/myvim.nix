@@ -8,6 +8,8 @@ return {
 			{ name = "neodev.nvim", dir = "@neodev_nvim@", opts = {} },
 			-- JSON/YAML schema
 			{ name = "schemastore.nvim", dir = "@schemastore_nvim@" },
+			-- Rust
+			{ name = "rustacean.nvim", dir = "@rustacean_nvim@", opts = {} },
 		},
 		config = function()
 			local lspconfig = require("lspconfig")
