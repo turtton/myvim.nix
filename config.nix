@@ -21,7 +21,6 @@ let
             go
             gomod
             graphql
-            haskell
             html
             javascript
             jsdoc

@@ -26,7 +26,4 @@ with pkgs;
   nodePackages.bash-language-server
   # Docker
   dockerfile-language-server
-  # Haskell
-  haskell-language-server
-  haskellPackages.fourmolu
 ]

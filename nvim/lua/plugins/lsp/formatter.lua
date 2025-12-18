@@ -26,7 +26,6 @@ return {
 
 					lua = { "stylua" },
 					nix = { "nixfmt" },
-					haskell = { "fourmolu" },
 
 					-- Misc
 					sh = { "shfmt" },

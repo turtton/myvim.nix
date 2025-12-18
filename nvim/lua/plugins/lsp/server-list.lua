@@ -19,9 +19,6 @@ return {
 	---- Go
 	"gopls",
 
-	---- Haskell
-	"hls",
-
 	---- Nix
 	"nixd",
 
