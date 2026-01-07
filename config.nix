@@ -25,7 +25,7 @@ let
             javascript
             jsdoc
             json
-            jsonc
+            json5
             lua
             make
             markdown
