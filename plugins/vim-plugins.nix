@@ -42,8 +42,7 @@ in
 
   # Syntax Highlighting
   nvim-treesitter
-  # https://nixpkgs-tracker.ocfox.me/?pr=475611
-  (nvim-treesitter-textobjects.overrideAttrs { doCheck = false; })
+  nvim-treesitter-textobjects
   hmts-nvim
 
   better-escape-nvim
