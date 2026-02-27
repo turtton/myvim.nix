@@ -66,8 +66,9 @@ in
   copilot-lua
   CopilotChat-nvim
 
-  # Claude Code
+  # Claude Code / OpenCode
   claudecode-nvim
+  opencode-nvim
 
   # Git
   gitsigns-nvim

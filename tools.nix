@@ -10,6 +10,9 @@ with pkgs;
   # Time management
   wakatime-cli
 
+  # Required by opencode.nvim
+  lsof
+
   # Language servers
   ## Lua
   lua-language-server

@@ -199,4 +199,68 @@ return {
 			{ "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Deny diff" },
 		},
 	},
+	{
+		name = "opencode.nvim",
+		dir = "@opencode_nvim@",
+		dependencies = {
+			{ name = "snacks.nvim", dir = "@snacks_nvim@" },
+		},
+		config = function()
+			vim.g.opencode_opts = {
+				-- エディターで自動リロードを有効化（必須）
+				server = {
+					-- OpenCodeは手動で起動することを想定（ターミナルで opencode --port を実行）
+					start = nil,
+					stop = nil,
+					toggle = nil,
+				},
+			}
+			vim.o.autoread = true -- opencode.nvimのファイル自動リロードに必須
+		end,
+		keys = {
+			{ "<leader>o", nil, desc = "OpenCode" },
+			-- 基本操作
+			{
+				"<leader>oo",
+				function()
+					require("opencode").toggle()
+				end,
+				desc = "Toggle OpenCode",
+			},
+			{
+				"<leader>oi",
+				function()
+					require("opencode").ask("@this: ", { submit = true })
+				end,
+				mode = { "n", "x" },
+				desc = "Ask OpenCode with context",
+			},
+			{
+				"<leader>os",
+				function()
+					require("opencode").select()
+				end,
+				mode = { "n", "x" },
+				desc = "OpenCode actions",
+			},
+			-- オペレーター機能
+			{
+				"go",
+				function()
+					return require("opencode").operator("@this ")
+				end,
+				mode = { "n", "x" },
+				desc = "Add range to OpenCode",
+				expr = true,
+			},
+			{
+				"goo",
+				function()
+					return require("opencode").operator("@this ") .. "_"
+				end,
+				desc = "Add line to OpenCode",
+				expr = true,
+			},
+		},
+	},
 }
