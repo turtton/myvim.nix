@@ -23,6 +23,12 @@ with pkgs;
   taplo
   ## yaml
   yaml-language-server
+  ## JSON/HTML/CSS
+  vscode-langservers-extracted
+  ## Markdown
+  markdown-oxide
+  ## Typo
+  typos-lsp
   ## Shell
   shellcheck
   shfmt
