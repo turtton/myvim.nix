@@ -17,3 +17,8 @@ fetch.github = "uga-rosa/cmp-skkeleton"
 src.git = "https://github.com/Dynge/gitmoji.nvim"
 src.branch = "main"
 fetch.github = "Dynge/gitmoji.nvim"
+
+[kotlin-nvim]
+src.git = "https://github.com/AlexandrosAlexiou/kotlin.nvim"
+src.branch = "main"
+fetch.github = "AlexandrosAlexiou/kotlin.nvim"

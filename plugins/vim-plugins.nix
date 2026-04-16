@@ -27,11 +27,17 @@ let
     inherit (sources.gitmoji-nvim) pname version src;
     dontBuild = true;
   };
+
+  kotlin-nvim = pkgs.vimUtils.buildVimPlugin {
+    inherit (sources.kotlin-nvim) pname version src;
+    dontBuild = true;
+  };
 in
 [
   vimdoc-ja
   skkeleton
   cmp-skkeleton
+  kotlin-nvim
 ]
 ++ (with pkgs.vimPlugins; [
   # Plugin manager

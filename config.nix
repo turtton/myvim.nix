@@ -26,6 +26,7 @@ let
             jsdoc
             json
             json5
+            kotlin
             lua
             make
             markdown

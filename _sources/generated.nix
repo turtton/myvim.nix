@@ -20,38 +20,50 @@
   };
   gitmoji-nvim = {
     pname = "gitmoji-nvim";
-    version = "2659de229c2b26d50732f1220700eebbcdb2d6ef";
+    version = "3339f97b12e923de77331e09cd427b19139e306f";
     src = fetchFromGitHub {
       owner = "Dynge";
       repo = "gitmoji.nvim";
-      rev = "2659de229c2b26d50732f1220700eebbcdb2d6ef";
+      rev = "3339f97b12e923de77331e09cd427b19139e306f";
       fetchSubmodules = false;
-      sha256 = "sha256-cihJ2U+GIqf98t6wS4Fso6R8l69vXT+BsstqY7rrlc4=";
+      sha256 = "sha256-Git7i7OANVQpZ7xK+Uk9zYIdV8RufS3Qarg4KRU/cZE=";
     };
-    date = "2025-04-23";
+    date = "2026-04-01";
+  };
+  kotlin-nvim = {
+    pname = "kotlin-nvim";
+    version = "262340932602a77ce0be12aab949864a37a756bc";
+    src = fetchFromGitHub {
+      owner = "AlexandrosAlexiou";
+      repo = "kotlin.nvim";
+      rev = "262340932602a77ce0be12aab949864a37a756bc";
+      fetchSubmodules = false;
+      sha256 = "sha256-SyYeGwFWCX1zNVV5muzxC6Y3Y6I9V67CNlyEldwj4ck=";
+    };
+    date = "2026-03-20";
   };
   skkeleton = {
     pname = "skkeleton";
-    version = "158ae753bc5099ab12537c23152926c42b1f7c3a";
+    version = "b530eac5a859ce2f8fa4d99fa5cd83b9d3199086";
     src = fetchFromGitHub {
       owner = "vim-skk";
       repo = "skkeleton";
-      rev = "158ae753bc5099ab12537c23152926c42b1f7c3a";
+      rev = "b530eac5a859ce2f8fa4d99fa5cd83b9d3199086";
       fetchSubmodules = false;
-      sha256 = "sha256-Ee55oGlNCoKwvDxaJyRCjqY89+DU2bP+7t8o/kkh8lU=";
+      sha256 = "sha256-OhHlG3ngNbvUSNqS/MFJpYI/cfbkxSxTPo8EiSwW/MU=";
     };
-    date = "2026-01-04";
+    date = "2026-04-02";
   };
   vimdoc-ja = {
     pname = "vimdoc-ja";
-    version = "52896db05d63b1bc00204eb4120293557f9586a4";
+    version = "1f75eefd3f19f7c061742bda19f57a41e88c5754";
     src = fetchFromGitHub {
       owner = "vim-jp";
       repo = "vimdoc-ja";
-      rev = "52896db05d63b1bc00204eb4120293557f9586a4";
+      rev = "1f75eefd3f19f7c061742bda19f57a41e88c5754";
       fetchSubmodules = false;
-      sha256 = "sha256-zjHMdybl+KG2K8FM37wQ+WutZDQXvNr7MZewlsj+dHY=";
+      sha256 = "sha256-sRTERmfRZCrn1O2vKY1VC9PCL/PiN32tBiYk5G3Fcqw=";
     };
-    date = "2026-02-25";
+    date = "2026-04-15";
   };
 }

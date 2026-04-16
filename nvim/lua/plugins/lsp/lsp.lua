@@ -141,4 +141,21 @@ return {
 			},
 		},
 	},
+
+	{
+		name = "kotlin.nvim",
+		dir = "@kotlin_nvim@",
+		ft = { "kotlin" },
+		cond = function()
+			local dir = os.getenv("KOTLIN_LSP_DIR")
+			return dir ~= nil and dir ~= ""
+		end,
+		opts = (function()
+			local java_home = os.getenv("JAVA_HOME")
+			if java_home and java_home ~= "" then
+				return { jre_path = java_home }
+			end
+			return {}
+		end)(),
+	},
 }

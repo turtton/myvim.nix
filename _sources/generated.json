@@ -22,7 +22,7 @@
     },
     "gitmoji-nvim": {
         "cargoLock": null,
-        "date": "2025-04-23",
+        "date": "2026-04-01",
         "extract": null,
         "name": "gitmoji-nvim",
         "passthru": null,
@@ -34,16 +34,37 @@
             "name": null,
             "owner": "Dynge",
             "repo": "gitmoji.nvim",
-            "rev": "2659de229c2b26d50732f1220700eebbcdb2d6ef",
-            "sha256": "sha256-cihJ2U+GIqf98t6wS4Fso6R8l69vXT+BsstqY7rrlc4=",
+            "rev": "3339f97b12e923de77331e09cd427b19139e306f",
+            "sha256": "sha256-Git7i7OANVQpZ7xK+Uk9zYIdV8RufS3Qarg4KRU/cZE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2659de229c2b26d50732f1220700eebbcdb2d6ef"
+        "version": "3339f97b12e923de77331e09cd427b19139e306f"
+    },
+    "kotlin-nvim": {
+        "cargoLock": null,
+        "date": "2026-03-20",
+        "extract": null,
+        "name": "kotlin-nvim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "AlexandrosAlexiou",
+            "repo": "kotlin.nvim",
+            "rev": "262340932602a77ce0be12aab949864a37a756bc",
+            "sha256": "sha256-SyYeGwFWCX1zNVV5muzxC6Y3Y6I9V67CNlyEldwj4ck=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "262340932602a77ce0be12aab949864a37a756bc"
     },
     "skkeleton": {
         "cargoLock": null,
-        "date": "2026-01-04",
+        "date": "2026-04-02",
         "extract": null,
         "name": "skkeleton",
         "passthru": null,
@@ -55,16 +76,16 @@
             "name": null,
             "owner": "vim-skk",
             "repo": "skkeleton",
-            "rev": "158ae753bc5099ab12537c23152926c42b1f7c3a",
-            "sha256": "sha256-Ee55oGlNCoKwvDxaJyRCjqY89+DU2bP+7t8o/kkh8lU=",
+            "rev": "b530eac5a859ce2f8fa4d99fa5cd83b9d3199086",
+            "sha256": "sha256-OhHlG3ngNbvUSNqS/MFJpYI/cfbkxSxTPo8EiSwW/MU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "158ae753bc5099ab12537c23152926c42b1f7c3a"
+        "version": "b530eac5a859ce2f8fa4d99fa5cd83b9d3199086"
     },
     "vimdoc-ja": {
         "cargoLock": null,
-        "date": "2026-02-25",
+        "date": "2026-04-15",
         "extract": null,
         "name": "vimdoc-ja",
         "passthru": null,
@@ -76,11 +97,11 @@
             "name": null,
             "owner": "vim-jp",
             "repo": "vimdoc-ja",
-            "rev": "52896db05d63b1bc00204eb4120293557f9586a4",
-            "sha256": "sha256-zjHMdybl+KG2K8FM37wQ+WutZDQXvNr7MZewlsj+dHY=",
+            "rev": "1f75eefd3f19f7c061742bda19f57a41e88c5754",
+            "sha256": "sha256-sRTERmfRZCrn1O2vKY1VC9PCL/PiN32tBiYk5G3Fcqw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "52896db05d63b1bc00204eb4120293557f9586a4"
+        "version": "1f75eefd3f19f7c061742bda19f57a41e88c5754"
     }
 }
