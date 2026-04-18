@@ -32,7 +32,7 @@ with pkgs;
   ## Shell
   shellcheck
   shfmt
-  nodePackages.bash-language-server
+  bash-language-server
   # Docker
   dockerfile-language-server
 ]
