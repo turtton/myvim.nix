@@ -29,6 +29,7 @@
             nixfmt.enable = true;
             taplo.enable = true;
             stylua.enable = true;
+            yamlfmt.enable = true;
           };
           settings.global.excludes = [
             "_sources/*"
