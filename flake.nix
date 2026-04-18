@@ -58,6 +58,8 @@
           default = pkgs.mkShell {
             packages = with pkgs; [
               nvfetcher
+              pinact
+              zizmor
             ];
           };
         };
