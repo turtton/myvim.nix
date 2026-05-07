@@ -32,6 +32,14 @@ let
     inherit (sources.kotlin-nvim) pname version src;
     dontBuild = true;
   };
+
+  # Workaround: Neovim 0.12+ returns table of nodes from tree-sitter captures,
+  # causing `:parent()` call on nil/table in hmts_path_handler and hmts_inject_handler.
+  # Upstream PR #35 (https://github.com/calops/hmts.nvim/pull/35) fixes a different issue (filename nil guard).
+  # TODO: Remove when upstream supports Neovim 0.12+ captures natively.
+  hmts_nvim_patched = pkgs.vimPlugins.hmts-nvim.overrideAttrs (old: {
+    patches = (old.patches or [ ]) ++ [ ./hmts-nil-guard.patch ];
+  });
 in
 [
   vimdoc-ja
@@ -49,7 +57,7 @@ in
   # Syntax Highlighting
   nvim-treesitter
   nvim-treesitter-textobjects
-  hmts-nvim
+  hmts_nvim_patched
 
   better-escape-nvim
 

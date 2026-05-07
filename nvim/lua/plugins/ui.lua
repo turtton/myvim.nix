@@ -171,6 +171,15 @@ return {
 			{ "<leader>ge", "<cmd>Neotree float git_status<CR>", desc = "Toggle git file explorer" },
 		},
 	},
+	-- snacks.nvim must load early to register Snacks global
+	{
+		name = "snacks.nvim",
+		dir = "@snacks_nvim@",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+
 	{
 		name = "claudecode.nvim",
 		dir = "@claudecode_nvim@",

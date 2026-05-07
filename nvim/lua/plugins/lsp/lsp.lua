@@ -9,43 +9,28 @@ return {
 			-- JSON/YAML schema
 			{ name = "schemastore.nvim", dir = "@schemastore_nvim@" },
 			-- Rust
-			{ name = "rustacean.nvim", dir = "@rustacean_nvim@", opts = {} },
+			{ name = "rustacean.nvim", dir = "@rustaceanvim@" },
 		},
 		config = function()
-			local lspconfig = require("lspconfig")
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-			local function is_available(server_name)
-				local config = lspconfig[server_name]
-				if not config then
-					return false
-				end
-				local default_config = config.document_config and config.document_config.default_config
-				if not default_config or not default_config.cmd then
-					return false
-				end
-				local cmd = default_config.cmd
-				if type(cmd) ~= "table" or type(cmd[1]) ~= "string" then
-					return false
-				end
-				return vim.fn.executable(cmd[1]) == 1
-			end
-
-			local base_opts = { capabilities = capabilities }
+			vim.lsp.config("*", {
+				capabilities = capabilities,
+			})
 
 			local server_list = require("plugins.lsp.server-list")
 			for server, config in pairs(server_list) do
-				if is_available(server) then
-					local overrides
-					if type(config) == "function" then
-						overrides = config(capabilities)
-					else
-						overrides = config
-					end
-					lspconfig[server].setup(vim.tbl_deep_extend("force", base_opts, overrides))
+				local overrides
+				if type(config) == "function" then
+					overrides = config(capabilities)
+				else
+					overrides = config
 				end
+				vim.lsp.config(server, overrides)
 			end
+
+			vim.lsp.enable(vim.tbl_keys(server_list))
 		end,
 		opts = {
 			servers = {
