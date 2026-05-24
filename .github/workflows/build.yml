@@ -40,9 +40,9 @@ jobs:
       - name: Build
         run: |
           echo "Building config files"
-          nix build --no-link --show-trace --system x86_64-linux .#config
+          nix build --no-link --show-trace .#config
           echo "Building packaged neovim"
-          nix build --no-link --show-trace --system x86_64-linux .
+          nix build --show-trace .
           df -h
       - name: Push to attic
         if: success()
