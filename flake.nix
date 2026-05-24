@@ -58,6 +58,7 @@
           default = pkgs.mkShell {
             packages = with pkgs; [
               nvfetcher
+              nixfmt-rfc-style
               pinact
               zizmor
             ];

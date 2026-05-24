@@ -58,6 +58,7 @@ in
   nvim-treesitter
   nvim-treesitter-textobjects
   hmts_nvim_patched
+  vim-nix
 
   better-escape-nvim
 

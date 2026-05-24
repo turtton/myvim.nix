@@ -196,6 +196,13 @@ return {
 		lazy = false,
 	},
 
+	-- Nix
+	{
+		name = "vim-nix",
+		dir = "@vim_nix@",
+		event = { "BufReadPre *.nix", "BufNewFile *.nix" },
+	},
+
 	-- Tex
 	{
 		name = "vimtex",

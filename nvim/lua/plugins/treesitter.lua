@@ -11,8 +11,12 @@ return {
 			vim.api.nvim_create_autocmd("FileType", {
 				callback = function(args)
 					local ft = args.match
-					-- Skip latex (use vimtex instead)
+					-- Skip latex (use vimtex instead) and nix (use vim-nix indent)
 					if ft == "latex" or ft == "tex" then
+						return
+					end
+					if ft == "nix" then
+						pcall(vim.treesitter.start, args.buf)
 						return
 					end
 					-- Check if parser exists for this filetype
