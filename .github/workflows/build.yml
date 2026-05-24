@@ -12,17 +12,26 @@ concurrency:
 permissions: {}
 jobs:
   build:
-    runs-on: ubuntu-latest
+    name: Build packaged neovim
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - "ubuntu-latest"
+          - "macos-latest"
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           persist-credentials: false
       - uses: cachix/install-nix-action@616559265b40713947b9c190a8ff4b507b5df49b # v31.10.4
-      - uses: icewind1991/attic-action@5b92b73fc87088f54ee787189f87f57418af3f09 # v1.2.1
-        with:
-          name: home
-          instance: https://attic.taile2777.ts.net/
-          authToken: ${{ secrets.ATTIC_TOKEN }}
+      - name: Setup attic client
+        run: |
+          nix profile install nixpkgs#attic-client
+          attic login --set-default home https://attic.taile2777.ts.net "$ATTIC_TOKEN"
+          attic use home
+        env:
+          ATTIC_TOKEN: ${{ secrets.ATTIC_TOKEN }}
       - name: GC
         run: |
           df -h
@@ -30,6 +39,11 @@ jobs:
           df -h
       - name: Build
         run: |
-          nix build --no-link --show-trace --system x86_64-linux .
+          echo "Building config files"
           nix build --no-link --show-trace --system x86_64-linux .#config
+          echo "Building packaged neovim"
+          nix build --no-link --show-trace --system x86_64-linux .
           df -h
+      - name: Push to attic
+        if: success()
+        run: attic push home ./result
