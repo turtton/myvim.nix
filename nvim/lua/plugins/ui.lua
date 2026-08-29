@@ -135,7 +135,7 @@ return {
 					hide_gitignored = false,
 					hide_hidden = false,
 				},
-				follow_curent_file = {
+				follow_current_file = {
 					enabled = true,
 					leave_dirs_open = true,
 				},
