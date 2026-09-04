@@ -17,9 +17,9 @@ return {
 		return {
 			defaults = {
 				file_ignore_patterns = {
-					"node_modules",
-					".git",
-					".direnv",
+					"node_modules/",
+					"%.git/",
+					"%.direnv/",
 				},
 				mappings = {
 					n = {
