@@ -3,7 +3,8 @@ pull_request_rules:
     # プルリクエストが特定のルールに一致しているか
     conditions:
       - author~=^turtton$
-      - check-success = build
+      - check-success = Build packaged neovim (ubuntu-latest)
+      - check-success = Build packaged neovim (macos-latest)
     # プルリクエストがルールに一致している場合に実行されるアクション
     actions:
       # ベースのブランチにプルリクエストをマージ
